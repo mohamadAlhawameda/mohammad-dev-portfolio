@@ -198,7 +198,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            4th-year Software Engineering Technology Student at McMaster University
+            4th-year Software Engineering Student at McMaster University
           </motion.p>
 
           <motion.p
