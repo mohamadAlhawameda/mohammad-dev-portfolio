@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mohammad Alhawameda Portfolio
 
-## Getting Started
+A modern, responsive, and interactive portfolio website built with Next.js and React to showcase my software engineering projects and skills.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This portfolio features a sleek design with smooth animations powered by Framer Motion and a dynamic project showcase with filtering by technology stack. It includes a fully functional contact form that sends messages via email using Nodemailer and Node.js backend. The site supports dark mode and is optimized for performance and SEO.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Responsive design optimized for desktop and mobile devices  
+- Animated components using Framer Motion for engaging user experience  
+- Dynamic project filtering by technology stack  
+- Contact form integrated with Nodemailer for email notifications  
+- Dark mode support  
+- Smooth scroll and other modern UI enhancements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- Next.js  
+- React  
+- TypeScript  
+- Framer Motion  
+- Nodemailer  
+- Node.js  
+- Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
