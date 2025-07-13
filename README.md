@@ -12,7 +12,6 @@ This portfolio features a sleek design with smooth animations powered by Framer 
 - Animated components using Framer Motion for engaging user experience  
 - Dynamic project filtering by technology stack  
 - Contact form integrated with Nodemailer for email notifications  
-- Dark mode support  
 - Smooth scroll and other modern UI enhancements
 
 ## Technologies Used
