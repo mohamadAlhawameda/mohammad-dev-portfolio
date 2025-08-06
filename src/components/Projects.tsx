@@ -12,6 +12,8 @@ const projectsData = [
       'AI-powered resume builder that helps users create professional resumes effortlessly with smart suggestions and easy editing.',
     techStack: ['Next.js', 'Node.js', 'MongoDB', 'AI API'],
     repoUrl: 'https://github.com/mohamadAlhawameda/resume-ai-builder',
+    liveUrl: 'https://resume-ai-builder-mu.vercel.app/', // <-- Add this line
+
   },
   {
     id: 2,
@@ -45,6 +47,15 @@ const projectsData = [
     techStack: ['C#', 'ASP.NET MVC', 'Entity Framework'],
     repoUrl:"https://github.com/mohamadAlhawameda/CareTrack-Network"
   },
+  {
+  id: 6,
+  title: 'Web Solutions Architect',
+  description:
+    'A professional website offering web and mobile development services. Built with TypeScript, styled with Tailwind CSS, includes animations, contact forms via Nodemailer, and hosted on AWS.',
+  techStack: ['TypeScript', 'Tailwind CSS', 'Node.js', 'AWS', 'Nodemailer', 'Framer Motion'],
+  liveUrl: 'https://www.websolarch.com/',
+},
+
 ];
 
 const allTags = Array.from(
@@ -164,19 +175,30 @@ export default function Projects() {
                 </div>
 
                 {/* Links */}
-                <div className="mt-4 flex gap-4">
-                  {project.repoUrl && (
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 text-sm font-semibold"
-                    >
-                      GitHub <ExternalLink size={16} />
-                    </a>
-                  )}
-                 
-                </div>
+               <div className="mt-4 flex gap-4">
+  {project.repoUrl && (
+    <a
+      href={project.repoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 text-sm font-semibold"
+    >
+      GitHub <ExternalLink size={16} />
+    </a>
+  )}
+
+  {project.liveUrl && (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-green-600 dark:text-green-400 hover:underline flex items-center gap-1 text-sm font-semibold"
+    >
+      Live Site <ExternalLink size={16} />
+    </a>
+  )}
+</div>
+
               </motion.div>
             ))}
           </AnimatePresence>

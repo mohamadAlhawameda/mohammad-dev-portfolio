@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, Linkedin, Github, Send, Calendar } from 'lucide-react';
 
 export default function Contact() {
@@ -14,6 +14,7 @@ export default function Contact() {
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [calendlyOpen, setCalendlyOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -62,15 +63,14 @@ export default function Contact() {
         </h2>
 
         {/* Schedule Meeting Button */}
+       {/* Schedule Meeting Button */}
         <div className="mb-12 flex justify-center">
-          <a
-            href="https://calendly.com/alhawameda4/30min"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => setCalendlyOpen(true)}
             className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105"
           >
             <Calendar size={20} /> Schedule a Meeting
-          </a>
+          </button>
         </div>
 
         <div className="flex flex-col md:flex-row gap-16">
@@ -187,6 +187,38 @@ export default function Contact() {
           </form>
         </div>
       </motion.div>
+
+       {/* Calendly Modal */}
+      <AnimatePresence>
+        {calendlyOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-6 w-[90%] max-w-3xl shadow-2xl relative"
+            >
+              <button
+                onClick={() => setCalendlyOpen(false)}
+                className="absolute top-4 right-4 text-black dark:text-white text-2xl font-bold"
+                aria-label="Close"
+              >
+                ×
+              </button>
+              <iframe
+                src="https://calendly.com/websolarch/30min"
+                className="w-full h-[500px] sm:h-[600px] rounded-xl"
+                frameBorder="0"
+              ></iframe>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
